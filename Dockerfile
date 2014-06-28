@@ -6,7 +6,7 @@ RUN apt-get -qq update
 RUN apt-get -qqy --force-yes dist-upgrade
 RUN apt-get install -qqy --force-yes wget avahi-daemon avahi-utils
 
-RUN wget http://downloads.plexapp.com/plex-media-server/0.9.9.7.429-f80a8d6/plexmediaserver_0.9.9.7.429-f80a8d6_amd64.deb
+RUN wget http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver_0.9.9.12.504-3e7f93c_amd64.deb
 RUN dpkg -i plexmediaserver_0.9.9.7.429-f80a8d6_amd64.deb
 
 VOLUME /config
