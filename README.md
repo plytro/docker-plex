@@ -1,7 +1,7 @@
 docker plex
 ===========
 
-This is a Dockerfile to set up (https://plex.tv/ "Plex Media Server")
+This is a Dockerfile to set up [Plex Media Server](https://plex.tv/)
 
 ### Build from docker file
 
