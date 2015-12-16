@@ -6,7 +6,7 @@ RUN apt-get -qq update
 RUN apt-get -qqy --force-yes dist-upgrade
 RUN apt-get install -qqy --force-yes wget avahi-daemon avahi-utils
 
-ENV PLEX_VERSION 0.9.12.4.1192-9a47d21
+ENV PLEX_VERSION 0.9.12.19.1537-f38ac80 
 RUN wget http://downloads.plexapp.com/plex-media-server/${PLEX_VERSION}/plexmediaserver_${PLEX_VERSION}_amd64.deb
 RUN dpkg -i plexmediaserver_${PLEX_VERSION}_amd64.deb
 
