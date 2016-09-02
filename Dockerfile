@@ -6,10 +6,6 @@ RUN apt-get -qq update
 RUN apt-get -qqy --force-yes dist-upgrade
 RUN apt-get install -qqy --force-yes wget avahi-daemon avahi-utils
 
-ENV PLEX_VERSION 1.1.3.2700-6f64a8d
-RUN wget http://downloads.plexapp.com/plex-media-server/${PLEX_VERSION}/plexmediaserver_${PLEX_VERSION}_amd64.deb
-RUN dpkg -i plexmediaserver_${PLEX_VERSION}_amd64.deb
-
 VOLUME /config
 VOLUME /data
 
@@ -17,6 +13,10 @@ ADD ./start.sh /start.sh
 RUN chmod u+x  /start.sh
 
 EXPOSE 32400
+
+ENV PLEX_VERSION 1.1.3.2700-6f64a8d
+RUN wget http://downloads.plexapp.com/plex-media-server/${PLEX_VERSION}/plexmediaserver_${PLEX_VERSION}_amd64.deb
+RUN dpkg -i plexmediaserver_${PLEX_VERSION}_amd64.deb
 
 ENTRYPOINT ["/start.sh"]
 
