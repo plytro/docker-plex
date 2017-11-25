@@ -14,7 +14,7 @@ RUN chmod u+x  /start.sh
 
 EXPOSE 32400
 
-ENV PLEX_VERSION 1.3.2.3112-1751929
+ENV PLEX_VERSION 1.9.7.4460-a39b25852
 RUN wget http://downloads.plexapp.com/plex-media-server/${PLEX_VERSION}/plexmediaserver_${PLEX_VERSION}_amd64.deb
 RUN dpkg -i plexmediaserver_${PLEX_VERSION}_amd64.deb
 
